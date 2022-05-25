@@ -5,7 +5,6 @@ window.addEventListener("load", function()  {
 
     var initialFileChooserContainer = document.getElementById('fileChooserContainer');
     initialFileChooserContainer.appendChild(createBigFileChooser(window.innerWidth*0.6, window.innerHeight*0.5 ));
-    initialFileChooserContainer.style.marginLeft = (window.innerWidth*0.2 - window.getComputedStyle(initialFileChooserContainer.parentElement).paddingLeft.replace("px", "")*2) + 'px';
 });
 
 function addNewChartToPage(fileDialog, fileDialogContainer){
@@ -98,10 +97,7 @@ function createBigFileChooser(width, height) {
         addNewChartToPage(newFileDialog, bigFileChooserContainer);
     });
 
-
-
-    var offsetTop = (height/2) - 42/2;
-    newFileChooser.style.marginTop = offsetTop + 'px';
+    newFileChooser.style.marginTop = '20px';
 
     return bigFileChooserContainer;
 }
